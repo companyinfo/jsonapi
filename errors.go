@@ -42,6 +42,9 @@ type ErrorObject struct {
 	// Code is an application-specific error code, expressed as a string value.
 	Code string `json:"code,omitempty"`
 
+	//Source is an object containing references to the primary source of the error.
+	Source Source `json:"source,omitempty"`
+
 	// Meta is an object containing non-standard meta-information about the error.
 	Meta *map[string]interface{} `json:"meta,omitempty"`
 }
@@ -49,4 +52,16 @@ type ErrorObject struct {
 // Error implements the `Error` interface.
 func (e *ErrorObject) Error() string {
 	return fmt.Sprintf("Error: %s %s\n", e.Title, e.Detail)
+}
+
+// Source is an object containing references to the primary source of the error.
+type Source struct {
+	// Pointer is a string indicating the value in the request document that caused the error.
+	Pointer string `json:"pointer,omitempty"`
+
+	// Parameter is a string indicating which query or path parameter caused the error.
+	Parameter string `json:"parameter,omitempty"`
+
+	// Header is a string indicating the name of a single request header which caused the error.
+	Header string `json:"header,omitempty"`
 }
