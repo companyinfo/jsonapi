@@ -1,9 +1,7 @@
 # jsonapi
 
-[![Build Status](https://travis-ci.org/google/jsonapi.svg?branch=master)](https://travis-ci.org/google/jsonapi)
 [![Go Report Card](https://goreportcard.com/badge/github.com/companyinfo/jsonapi)](https://goreportcard.com/report/github.com/companyinfo/jsonapi)
 [![GoDoc](https://godoc.org/github.com/companyinfo/jsonapi?status.svg)](http://godoc.org/github.com/companyinfo/jsonapi)
-[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
 
 A serializer/deserializer for JSON payloads that comply to the
 [JSON API - jsonapi.org](http://jsonapi.org) spec in go.
