@@ -488,7 +488,7 @@ Contributions are welcome! If you find a bug, want to add a feature, or have sug
 
 ## License
 
-Copyright 2024 Company.info
+Copyright 2024 Company.info B.V.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
