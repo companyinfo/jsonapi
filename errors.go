@@ -43,7 +43,7 @@ type ErrorObject struct {
 	Code string `json:"code,omitempty"`
 
 	//Source is an object containing references to the primary source of the error.
-	Source Source `json:"source,omitempty"`
+	Source *Source `json:"source,omitempty"`
 
 	// Meta is an object containing non-standard meta-information about the error.
 	Meta *map[string]interface{} `json:"meta,omitempty"`

@@ -412,7 +412,10 @@ if err := validate(&myStructToValidate); err != nil {
 		Title: "Validation Error",
 		Detail: "Given request body was invalid.",
 		Status: "400",
-		Meta: map[string]interface{}{"field": "some_field", "error": "bad type", "expected": "string", "received": "float64"},
+        Meta:   &map[string]interface{}{"field": "some_field", "error": "bad type", "expected": "string", "received": "float64"},
+        Source: &Source{
+            Pointer: "field of body with error",
+        },
 	}})
 	return
 }
