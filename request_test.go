@@ -1279,19 +1279,19 @@ func TestUnmarshalNestedStruct(t *testing.T) {
 				"boss":       boss,
 				"founded-at": "2016-08-17T08:27:12Z",
 				"teams": []map[string]interface{}{
-					map[string]interface{}{
+					{
 						"name": "Dev",
 						"members": []map[string]interface{}{
-							map[string]interface{}{"firstname": "Sean"},
-							map[string]interface{}{"firstname": "Iz"},
+							{"firstname": "Sean"},
+							{"firstname": "Iz"},
 						},
 						"leader": map[string]interface{}{"firstname": "Iz"},
 					},
-					map[string]interface{}{
+					{
 						"name": "DxE",
 						"members": []map[string]interface{}{
-							map[string]interface{}{"firstname": "Akshay"},
-							map[string]interface{}{"firstname": "Peri"},
+							{"firstname": "Akshay"},
+							{"firstname": "Peri"},
 						},
 						"leader": map[string]interface{}{"firstname": "Peri"},
 					},
