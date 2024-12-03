@@ -1,3 +1,17 @@
+// Copyright 2024 Company.info B.V.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//	http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
 package jsonapi
 
 import (
@@ -51,17 +65,16 @@ var (
 // Many Example: you could pass it, w, your http.ResponseWriter, and, models, a
 // slice of Blog struct instance pointers to be written to the response body:
 //
-//	 func ListBlogs(w http.ResponseWriter, r *http.Request) {
-//     blogs := []*Blog{}
+//		 func ListBlogs(w http.ResponseWriter, r *http.Request) {
+//	    blogs := []*Blog{}
 //
-//		 w.Header().Set("Content-Type", jsonapi.MediaType)
-//		 w.WriteHeader(http.StatusOK)
+//			 w.Header().Set("Content-Type", jsonapi.MediaType)
+//			 w.WriteHeader(http.StatusOK)
 //
-//		 if err := jsonapi.MarshalPayload(w, blogs); err != nil {
-//			 http.Error(w, err.Error(), http.StatusInternalServerError)
+//			 if err := jsonapi.MarshalPayload(w, blogs); err != nil {
+//				 http.Error(w, err.Error(), http.StatusInternalServerError)
+//			 }
 //		 }
-//	 }
-//
 func MarshalPayload(w io.Writer, models interface{}) error {
 	payload, err := Marshal(models)
 	if err != nil {

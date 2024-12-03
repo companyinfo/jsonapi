@@ -6,6 +6,15 @@
 A serializer/deserializer for JSON payloads that comply to the
 [JSON API - jsonapi.org](http://jsonapi.org) spec in go.
 
+This repository is a fork of https://github.com/google/jsonapi, created to enhance and extend its functionality. The original project is no longer actively maintained, so we've taken the opportunity to:
+
+* Add new features required for our use cases.
+* Improve existing functionality.
+* Ensure continued updates and support for the project.
+
+Our goal is to make this project more versatile and reliable for the community. Contributions, issues, and suggestions are welcome!
+
+Feel free to explore and contribute to this evolving project.
 
 
 ## Installation
@@ -403,7 +412,10 @@ if err := validate(&myStructToValidate); err != nil {
 		Title: "Validation Error",
 		Detail: "Given request body was invalid.",
 		Status: "400",
-		Meta: map[string]interface{}{"field": "some_field", "error": "bad type", "expected": "string", "received": "float64"},
+        Meta:   &map[string]interface{}{"field": "some_field", "error": "bad type", "expected": "string", "received": "float64"},
+        Source: &Source{
+            Pointer: "field of body with error",
+        },
 	}})
 	return
 }
@@ -470,6 +482,22 @@ This assumes that I have my repo structured with a `src` dir containing
 a collection of packages and `GOPATH` is set to the root
 folder--containing `src`.
 
-## Contributing
+## Contribution
 
-Fork, Change, Pull Request *with tests*.
+Contributions are welcome! If you find a bug, want to add a feature, or have suggestions for improvements, feel free to open issues or submit pull requests.
+
+## License
+
+Copyright 2024 Company.info B.V.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
