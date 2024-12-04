@@ -1,5 +1,6 @@
 # jsonapi
 
+[![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/companyinfo/jsonapi/ci.yaml?branch=master)](https://github.com/companyinfo/jsonapi/actions/workflows/ci.yaml)
 [![Go Report Card](https://goreportcard.com/badge/github.com/companyinfo/jsonapi)](https://goreportcard.com/report/github.com/companyinfo/jsonapi)
 [![GoDoc](https://godoc.org/github.com/companyinfo/jsonapi?status.svg)](http://godoc.org/github.com/companyinfo/jsonapi)
 
